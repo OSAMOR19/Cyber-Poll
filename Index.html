@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cf8c647d77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/Index.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.10.0/dist/umd/supabase.min.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script> -->
+    <!-- SupaBase CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    
+    <!-- blueimpCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.19.0/js/md5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.js" crossorigin="anonymous"></script>
+    <script defer src="JavaScript/SignUp.js"></script>
+    <title>Voting App || Sign Up</title>
+</head>
+<body>
+    <main>
+        <div class="main-content carousel-container">
+            <span class="span left" onclick="toggleCarousel()"><i class="fa-solid fa-arrow-left"></i></span>
+            <span class="span right" onclick="toggleCarousel()"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="carousel item-one">
+                <h2>"The vote is the most powerful instrument ever devised by man for breaking down injustice and destroying the terrible walls which imprison men because they are different from other men."</h2>
+                <p class="author">- Lyndon B. Johnson</p>
+            </div>
+            <div class="carousel item-two hidden">
+                <h2>"The vote is a trust more delicate than any other, for it involves not just the interests of the voter, but the interests of others as well."</h2>
+                <p class="author">- Samuel J. Tilden</p>
+            </div>
+        </div>
+        <div class="main-content form">
+            <h1>Sign Up</h1>
+            <form action="" id="form">
+               <input type="text" id="Uname" name="username" onclick="clicked(this)" oninput="input(this)" placeholder="Your Username" required /></br> 
+               <div class="error UnameErr hidden"> 
+                    <p id="numberErr">Username cannot contain numbers!</p>
+                    <p id="symbolErr">Username cannot contain symbols</p>
+                </div>
+                <input type="text" id="nin" autocomplete="off" name="nin" onclick="clicked(this)" oninput="input(this)" placeholder="Enter Your NIN Number" required /></br> 
+                <div class="error ninErr hidden"> 
+                    <p id="letterErr">NIN cannot contain letters!</p>
+                    <p id="isCompleteErr">NIN cannot be more or less than 11 digits!</p>
+                    <p id="symbolNinErr">NIN cannot contain symbols</p>
+                </div>
+                <button type="submit" name="submit">REGISTER</button>
+            </form>
+        </div>
+    </main> 
+</body>
+</html>
